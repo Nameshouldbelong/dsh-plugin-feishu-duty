@@ -1,0 +1,8 @@
+{
+  // 服务端（Node 侧）构建配置：复用 tsconfig.build.json 的全部编译选项，
+  // 加 composite 使 `tsc -b` 可构建（package.json scripts 引用本文件）。
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "composite": true
+  }
+}

@@ -1,0 +1,6 @@
+# feishu-bridge-control bundle patch: mounts the Feishu duty bridge control
+# toolset row. Runtime defaults live at the plugin's config boundary; users
+# override them in their profile patch row with the same id.
+- insert:
+    - id: feishu-bridge-control
+      name: feishu-bridge-control

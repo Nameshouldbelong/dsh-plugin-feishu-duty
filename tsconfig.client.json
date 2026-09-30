@@ -1,0 +1,23 @@
+{
+  // 浏览器端（src/client/**）类型检查配置：产物由 tsdown 打包，tsc 仅产出
+  // 声明文件供类型核验。浏览器平台种子模块（dsh-client-store 等）无
+  // node_modules 实体，其类型见 src/client/seed-modules.d.ts。
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "lib/types-client",
+    "types": ["react"]
+  },
+  "include": ["src/client/**/*.ts", "src/client/**/*.tsx"],
+  "exclude": ["node_modules"]
+}

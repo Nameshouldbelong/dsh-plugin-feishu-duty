@@ -1,0 +1,9 @@
+node_modules/
+lib/
+*.tgz
+*.tsbuildinfo
+inbox/
+# packages/feishu-bridge-control 直接以 lib/ 为源码目录（非构建产物），豁免忽略
+!packages/feishu-bridge-control/lib/
+!packages/feishu-bridge-control/lib/**
+dist/
