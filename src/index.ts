@@ -126,8 +126,11 @@ async function mount(ctx: Context, config: FeishuDutyConfig): Promise<void> {
   }
 
   const client = new FeishuClient({
-    appId: runtime.appId ?? '',
-    appSecret: runtime.appSecret ?? '',
+    // The lark SDK asserts non-empty credentials at construction; the
+    // disablePoller compatibility mode never dials out, so placeholder
+    // values keep the plugin fully activatable with zero Feishu network.
+    appId: runtime.appId || 'disabled-app',
+    appSecret: runtime.appSecret || 'disabled-secret',
     domain: runtime.domain === 'lark' ? 'lark' : 'feishu',
     onState: (up) => {
       ctx.logger.info('feishu-duty', up ? 'Feishu channel up' : 'Feishu channel down')
