@@ -5,8 +5,5 @@ overrides:
   '@deepseek-ai/dsh-scope': 0.1.5-rc.3
   '@deepseek-ai/dsh-typert-protocol': 0.1.5-rc.3
   '@deepseek-ai/dsh-timeout': 0.1.5-rc.3
-onlyBuiltDependencies:
-  - protobufjs
-  - esbuild
 allowBuilds:
-  protobufjs: set this to true or false
+  protobufjs: true
